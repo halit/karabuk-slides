@@ -1,0 +1,513 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme{m}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+
+\usemintedstyle{trac}
+
+\title{Python}
+\subtitle{}
+\date{27 Şubat 2015}
+\author{Halit Alptekin \href{mailto:info@halitalptekin.com}{( info@halitalptekin.com} )}
+\institute{Karabük}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}[fragile]
+    \frametitle{\$ whoami}
+    \begin{description}
+        \item[EDUC] Bilgisayar mühendisliği
+        \item[WORK] Bilgi güvenliği
+        \item[IDEA] Özgür yazılım ve açık kaynak tutkunu
+        \item[MEMB] TMD, LKD, Octosec
+        \item[LIFE] GO, matematik, kriptoloji
+        \item[HOBB] A sınıfı amatör telsizci, elektronik, robotik
+    \end{description}
+\end{frame}
+
+\section{Hacker}
+
+\begin{frame}[fragile]
+    \frametitle{Kimdir?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Sorunlar için yaratıcı çözümler üretir
+        \item Yaş, cinsiyet, ırk, dil, din ayrımı yapmaz
+        \item Ürettiği yaratıcı çözümlerin, güzelliğine göre başarı kazanır
+        \item Çözümlerin yanında sistemler üzerinde açık bulur
+        \item MIT kökenli
+    \end{itemize}  
+\end{frame}
+
+\plain{Gerçek Hacker?}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3.2in]{babanne.jpeg}\end{center}}
+
+\section{Özgürlük}
+
+\begin{frame}[fragile]
+    \frametitle{Özgür Yazılım?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Siyasi hareket
+        \item Çalıştırma, kopyalama, dağıtma, inceleme, değiştirme ve geliştirme gibi özgürlükler ile ilgilenir
+        \item Amaç yazılımları özgür kılmaktır
+        \item Çeşitli lisanlar ile sağlanır(GPL, BSD vb)
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Açık Kaynak Yazılım?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Sadece yazılımın kaynak kodlarının erişilebilir olduğunu vurgular
+        \item Yazılım geliştirme metodolojisidir
+        \item Özgür olmadan da açık kaynaklı olunabilir ancak tersi mümkün değildir
+        \item Kodları açmak, yazılımı özgür bırakmak için yeterli değildir
+    \end{itemize}  
+\end{frame}
+
+
+\section{Python}
+
+\begin{frame}[fragile]
+  \frametitle{Nedir?}
+  \begin{center}
+  Python, turing-complete bir programlama dilidir.
+  \includegraphics[width=0.5\textwidth]{py.png}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Hikayesi?}
+    \begin{itemize}[<+- | alert@+>]
+        \item 1990 yılında Guido van Rossum tarafından geliştirilmeye başlanmıştır
+        \item İsmini Monty Python isimli ingiliz gösteri grubundan almıştır
+        \item Özellikle Hacker kültürünün Perl'den sonra sahiplenmesiyle ayrıcalıklı bir duruma gelmiştir
+        \item Geliştirilmesi, Python Yazılım Vakfı çevresinde toplanan geliştiriciler ile sağlanmaktadır
+        \item Ocak 1994 tarihinde 1.0 sürümü yayınlanmıştır
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Özellikleri?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Genel amaçlı
+        \item Yüksek seviyeli
+        \item Çoklu paradigmalı
+        \item Dinamik tip sistemi
+    \end{itemize}  
+\end{frame}
+
+\plain{Python?}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3.2in]{python.png}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Artıları?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Kod okunabilirliği
+        \item Kolay öğrenme
+        \item Sade ve basit sözdizimi
+        \item Taşınabilir uygulamalar
+        \item İçe bakış ve dökümantasyon
+        \item Çok geniş kütüphane desteği
+        \item Hızli geliştirme imkanı
+        \item Özgür yazılım, açık kaynak kodlu
+    \end{itemize}  
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Eksileri?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Derlenmiyor, yorumlanıyor
+        \item Mobil
+        \item Çok kolay gözükmesi
+    \end{itemize}  
+\end{frame}
+
+\plain{Python?}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3.2in]{pyjava.jpg}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Neler yapabilirim?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Web sitesi
+        \item Oyun
+        \item Günlük araçlar
+        \item Mobil uygulama
+        \item Bilimsel çalışma\ldots 
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Kimler kullanıyor?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Google, Yahoo, NASA
+        \item Dropbox, Disqus, Mozilla
+        \item Friendfeed, Reddit, Eventbrite
+        \item Walt Disney, Battlefield 2, Civilization 4
+        \item Nokia, IBM, CIA \ldots  
+    \end{itemize}  
+\end{frame}
+
+\section{Nasıl?}
+
+\begin{frame}[fragile]
+\frametitle{Pip}
+    Python'un kendi paket yöneticisi:
+      \begin{minted}[fontsize=\small]{bash}
+        apt-get install python-pip
+        yum install python-pip
+        pacman -S python2-pip (python-pip)
+      \end{minted}    
+    Temel komutları:
+    \begin{minted}[fontsize=\small]{bash}
+        pip install <paket_adi>
+        pip search <paket_adi>
+        pip uninstall <paket_adi>
+        pip install -r requirements.txt
+    \end{minted}       
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Virtualenv}
+    Python bağımlılıkları için izole bir ortam oluşturuyor. Yüklediğiniz paketler sistemin genelini etkilemiyor. Paketlerin farklı sürümleri ile çalışma imkanı sağlıyor.
+    \begin{minted}[fontsize=\small]{bash}
+        pip install virtualenv
+    \end{minted}  
+    Temel komutlar:
+    \begin{minted}[fontsize=\small]{bash}
+        cd <klasor_adi>
+        virtualenv <sanal_ortam_adi>
+        virtualenv -p /usr/bin/python2.7 <sanal_ortam_adi>
+        source <sanal_ortam_adi>/bin/activate
+        deactivate
+    \end{minted}    
+    Birleşmenin tam zamanı!
+    \begin{minted}[fontsize=\small]{bash}
+        pip freeze > requirements.txt
+        pip install -r requirements.txt
+    \end{minted}       
+\end{frame}
+
+\plain{IPython}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3.2in]{ip.png}\end{center}}
+
+
+\begin{frame}[fragile]
+    \frametitle{Pyserial}
+    \begin{center}
+        Arduino ile haberleşmek istiyorum?
+    
+      \begin{minted}[fontsize=\small]{python}
+        import serial
+        
+        ser = serial.Serial('/dev/tty.usbserial', 9600)
+        while True:
+            print ser.readline()
+            ser.write('1')
+      \end{minted}
+      \end{center}  
+\end{frame}
+
+\plain{PySerial}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3.2in]{plot.png}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Flask}
+    \begin{center}
+        Ufak bir web sitesi yapmak istiyorum?
+    \end{center}  
+      \begin{minted}[fontsize=\small]{python}
+        from flask import Flask
+        app = Flask(__name__)
+        
+        @app.route("/")
+        def hello():
+            return "Hello World!"
+        
+        if __name__ == "__main__":
+            app.run()
+      \end{minted}
+\end{frame}
+
+\plain{Flask}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth]{pp.jpg}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Requests}
+    \begin{center}
+        API'ler ile çok kolay haberleşmek istiyorum?
+    \end{center}  
+      \begin{minted}[fontsize=\small]{python}
+        import requests
+        
+        link = 'https://api.github.com/user'
+        r = requests.get(link, auth=('user', 'pass'))
+        r.status_code
+        r.text
+        r.json()
+      \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Multiprocessing}
+    \begin{center}
+        Ders sayfasındaki tüm PDF'leri indirmek istiyorum?
+    \end{center}  
+      \begin{minted}[fontsize=\small]{python}
+        import requests
+        from multiprocessing import Pool
+        
+        links = ["http://a.com/1.pdf", 
+                 "http://b.com/2.pdf"]
+        
+        def saver(link):
+            with open(link.split("/")[-1], "wb") as ff:
+                ff.write(requests.get(link).content)
+        
+        pool = Pool(8)
+        pool.map(saver, links)
+        pool.close()
+        pool.join()
+
+      \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Pyside}
+    \begin{center}
+        Masaüstü uygulaması yapmak istiyorum?
+
+    \end{center}  
+    \includegraphics[width=\textwidth, height=2.8in]{f.jpg}    
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Django}
+    \begin{center}
+        Kurumsal bir web projesi yapmak istiyorum?
+    \end{center}  
+\end{frame}
+
+\plain{Pinterest}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth]{pin.png}\end{center}}
+
+\plain{Instagram}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth]{ins.png}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Socket}
+    \begin{center}
+        Port tarayıcı yazmak istiyorum?
+      
+      \begin{minted}[fontsize=\small]{python}
+import socket
+
+for port in range(1,1025):  
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    result = sock.connect_ex((remoteServerIP, port))
+    if result == 0:
+        print "Port {}: \t Open".format(port)
+    sock.close()
+      \end{minted}
+      \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Scrapy}
+    \begin{center}
+        Bir websitesini, platformu komple indexlemek istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth]{sc.png}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Pygame}
+    \begin{center}
+        Oyun yapmak istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{pyg.jpg}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Ctypes}
+    \begin{center}
+        C veya fortran'da yazdıklarımı doğrudan kullanmak istiyorum?
+    
+      \begin{minted}[fontsize=\small]{python}
+      from ctypes import *
+      
+      libc = CDLL("libc.so.6")
+      print libc.time(None)
+      
+      printf = libc.printf
+      printf("Hello, %s\n", "World!")
+      \end{minted}
+      \end{center}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Fabric}
+    \begin{center}
+        Sistem yöneticisiyim, sürekli yapmam gereken bazı işler var?
+    
+        \begin{minted}[fontsize=\small]{python}
+    from fabric.api import *
+    
+    sudo("mkdir /var/www")
+    
+    sudo("mkdir /var/www/web-app-one", user="web-admin")
+    result = sudo("ls -l /var/www")
+    
+    run("aptitude    update")
+    run("aptitude -y upgrade")
+        \end{minted}
+        
+      \end{center}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Scipy}
+    \begin{center}
+        Bilimsel çalışma yapmak istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{bb.png}
+\end{frame}
+
+\plain{Scipy}{\vspace{-3em}
+    \begin{center}
+    \includegraphics[width=\textwidth]{ss.jpg}
+    \end{center}
+    \begin{center}
+    \includegraphics[height=1.2in]{ss1.png}
+    \end{center}
+    }
+
+\begin{frame}[fragile]
+    \frametitle{Pandas}
+    \begin{center}
+        İstatiksel analiz yapmak istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{pandas.png}
+\end{frame}
+
+\plain{Pandas}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth]{pandas2.png}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Opencv}
+    \begin{center}
+        Görüntü işleme üzerine çalışmak istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{op.jpg}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Simplecv}
+    \begin{center}
+      \begin{minted}[fontsize=\small]{python}
+    from SimpleCV import Image, Color, Display
+    
+    img = Image('http://i.imgur.com/lfAeZ4n.png')
+    
+    feats = img.findKeypoints()
+    feats.draw(color=Color.RED)
+    img.show()
+    
+    output = img.applyLayers()
+    output.save('juniperfeats.png')
+      \end{minted}
+      \includegraphics[height=1.2in]{jun.png}
+      \end{center}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Exploit}
+    \begin{center}
+        Exploit geliştirmek istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{dos.png}
+\end{frame}
+
+\plain{Peda}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth]{peda4.png}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Cmd}
+    \begin{center}
+         Interaktif komut satırı uygulamaları yapmak istiyorum?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{sc1.png}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{PIL}
+    \begin{center}
+         QR bahçesini nasıl biçebilirim?
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{qr.png}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{QR}
+    \begin{center}
+      \begin{minted}[fontsize=\small]{python}
+import Image
+import sys
+from qr import *
+
+img = Image.open("qrgarden.png")
+img = img.convert('RGB')
+for y in range(0, 100):
+    for x in range(100):
+        qrtxt = scan(img, 29*module_size*x, 29*module_size*y)
+        print read_qr(qrtxt)
+      \end{minted}
+      \end{center}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Airprobe}
+    \begin{center}
+         Telefon dinleme? :)
+    \end{center}  
+      \includegraphics[width=\textwidth,height=2.6in]{airprobe.jpg}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Nasıl öğrenebilirim?}
+    \begin{itemize}
+        \item Learn Python the hard way
+        \item The Hitchhiker’s guide to Python
+        \item Google’s Python class
+        \item Python tracks at Codecademy
+        \item PySchools
+        \item Python Monk
+        \item Dive into Python
+        \item Think Python
+        \item Invent with Python
+        \item A byte of Python\ldots
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Nasıl takip ederim?}
+    \begin{itemize}
+        \item Python subreddit
+        \item Python Weekly
+        \item Pycoder’s
+        \item Python planet
+        \item Pycon
+        \item PyIstanbul
+        \item Github\ldots
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}{Sonuc}
+
+\begin{center}Sunum slaytlarına aşağıdaki linkten erişebilirsiniz
+
+\url{github.com/halitalptekin/karabuk-slides}\end{center}
+
+
+\end{frame}
+
+\plain{}{Sorular?}
+
+\end{document}
